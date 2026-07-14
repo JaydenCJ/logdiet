@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="430" viewBox="0 0 760 430" font-family="Menlo, Consolas, monospace" font-size="13">
+  <rect width="760" height="430" rx="10" fill="#101418"/>
+  <circle cx="24" cy="22" r="6" fill="#ff5f56"/>
+  <circle cx="44" cy="22" r="6" fill="#ffbd2e"/>
+  <circle cx="64" cy="22" r="6" fill="#27c93f"/>
+  <text x="380" y="27" fill="#8b949e" text-anchor="middle" font-size="12">logdiet — a cost-ranked hit list for your log volume</text>
+  <g fill="#c9d1d9">
+    <text x="24" y="60"><tspan fill="#7ee787">$</tspan> logdiet rank /tmp/logdiet-demo.log</text>
+    <text x="24" y="88"><tspan fill="#79c0ff">logdiet rank</tspan> — 18,250 lines, 2.1 MiB</text>
+    <text x="24" y="108" fill="#8b949e">window: 2026-07-01T00:00:00Z → 23:59:55Z (23h59m55s)   rate: 2.1 MiB/day</text>
+    <text x="24" y="140" fill="#d2a8ff">   #  action  level  count      bytes    share  statement</text>
+    <text x="24" y="164">   1  <tspan fill="#f778ba">demote</tspan>  debug  9,000  972.7 KiB  <tspan fill="#f778ba">45.9%</tspan>  cache lookup key=sess:&lt;hex&gt; hit=&lt;bool&gt;</text>
+    <text x="24" y="186">   2  <tspan fill="#f778ba">demote</tspan>  info   6,000  877.7 KiB  <tspan fill="#f778ba">41.4%</tspan>  http request completed {method,path,…}</text>
+    <text x="24" y="208">   3  <tspan fill="#f778ba">demote</tspan>  debug  1,500  163.4 KiB   7.7%  retrying upstream call {attempt,…}</text>
+    <text x="24" y="230">   4  <tspan fill="#f778ba">demote</tspan>  info   1,500   84.1 KiB   4.0%  session refreshed for user &lt;n&gt;</text>
+    <text x="24" y="252">   5  <tspan fill="#7ee787">keep</tspan>    warn     200   18.2 KiB   0.9%  queue depth above soft limit {depth,…}</text>
+    <text x="24" y="284" fill="#8b949e">demotable below warn: <tspan fill="#f778ba">98.9%</tspan> of all bytes</text>
+    <text x="24" y="320"><tspan fill="#7ee787">$</tspan> logdiet plan --target 60 /tmp/logdiet-demo.log</text>
+    <text x="24" y="348">   1  debug  45.9%  cum 45.9%   cache lookup key=sess:&lt;hex&gt; hit=&lt;bool&gt;</text>
+    <text x="24" y="370">   2  info   41.4%  cum 87.3%   http request completed {method,path,…}</text>
+    <text x="24" y="398"><tspan fill="#d2a8ff">plan:</tspan> demote 2 statements → cut <tspan fill="#f778ba">87.3%</tspan> (target 60.0%)   <tspan fill="#7ee787">plan: OK</tspan></text>
+  </g>
+</svg>
